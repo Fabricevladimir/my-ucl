@@ -10,18 +10,19 @@
   "lint-staged": {
     "app/**/*.{js,jsx}": [
       "eslint --ext .jsx --ext .js app/ --fix"
-  ],
-  "./src/**": [
+    ],
+    "./src/**": [
       "prettier --write ."
-  ]
+    ]
   },
   "husky": {
     "hooks": {
-    "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
-},
+  },
   "dependencies": {
     "expo": "~39.0.2",
+    "expo-constants": "~9.2.0",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
