@@ -1,4 +1,3 @@
-// TODO: install both packages as well as mock for async storage
 import dayjs from 'dayjs';
 import AsyncStorage from '@react-native-community/async-storage';
 

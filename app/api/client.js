@@ -3,17 +3,20 @@
  * headers and cache opperations
  */
 
-// TODO: install apisauce
-
 import { create } from 'apisauce';
 
 import cache from '../utils/cache';
 import logger from '../utils/logger';
 import settings from '../config/settings';
 
+import key from '../../key';
+
 const apiClient = create({
   baseURL: settings.apiUrl,
-  headers: { 'X-RapidAPI-Key': settings.apiKey },
+
+  // TODO: replace with appropriate key
+  // headers: { 'X-RapidAPI-Key': settings.apiKey },
+  headers: { 'X-RapidAPI-Key': key },
 });
 
 const get = apiClient.get;
