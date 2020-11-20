@@ -11,7 +11,7 @@
     "app/**/*.{js,jsx}": [
       "eslint --ext .jsx --ext .js app/ --fix"
     ],
-    "./app/**": [
+    "./app/**.{js, jsx, json}": [
       "prettier --write ."
     ]
   },
