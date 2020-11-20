@@ -1,4 +1,6 @@
-function log() {}
+function log(error) {
+  console.log(error);
+}
 
 function init() {}
 
