@@ -1,15 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
+import Text from './app/components/common/Text/Text';
 import Screen from './app/components/common/Screen';
+import { LocaleProvider } from './app/contexts/LocaleContext';
 
 export default function App() {
   return (
-    <Screen>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
-    </Screen>
+    <LocaleProvider>
+      <Screen>
+        <View style={styles.container}>
+          <Text>hello</Text>
+        </View>
+      </Screen>
+    </LocaleProvider>
   );
 }
 
