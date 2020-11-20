@@ -1,3 +1,6 @@
 {
-  "hello": "Welcome to the application!"
+  "hello": "Welcome to the application!",
+  "stats-top-goal-scorers-value": "Goals",
+  "stats-top-goal-scorers-title": "Top Goal Scorers",
+  "stats-top-goal-scorers-subtitle": "Player"
 }

@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { lightTheme } from '../../../styles/theme';
+import theme from '../../../styles/theme';
 
 export default StyleSheet.create({
   text: {
-    color: lightTheme.onBackground,
+    color: theme.onSurface,
   },
 });

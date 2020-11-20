@@ -1,5 +1,6 @@
 export default {
   red: '#ff0000',
+  gray: '#545454',
   white: '#fff',
   black: '#000',
   c1Blue: '#01579b',
@@ -10,4 +11,5 @@ export default {
   darkGray: '#2A2A2A',
   lightGray: '#e6e6e6',
   transparentWhite: 'rgba(255, 255,255, 0.2)',
+  transparentWhiteBackground: 'rgba(255, 255,255, 0.9)',
 };
