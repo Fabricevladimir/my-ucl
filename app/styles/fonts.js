@@ -1,0 +1,5 @@
+export default {
+  FONT_SIZE_SMALL: 12,
+  FONT_SIZE_LARGE: 15,
+  FONT_SIZE_MEDIUM: 14,
+};

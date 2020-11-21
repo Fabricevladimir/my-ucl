@@ -1,4 +1,5 @@
 import colors from './colors';
+import fonts from './fonts';
 
 export default {
   primary: colors.c1Blue,
@@ -18,18 +19,22 @@ export default {
   onSecondary: colors.black,
   onBackground: colors.white,
 
+  defaultContainerPadding: 10,
+
+  // Common
   subTitleText: {
     color: colors.gray,
-    fontSize: 12,
+    fontSize: fonts.FONT_SIZE_SMALL,
   },
 
   sectionTitleText: {
     color: colors.white,
-    fontSize: 16,
+    fontSize: fonts.FONT_SIZE_LARGE,
+    fontWeight: 'bold',
   },
 
   titleText: {
     color: colors.gray,
-    fontSize: 14,
+    fontSize: fonts.FONT_SIZE_MEDIUM,
   },
 };

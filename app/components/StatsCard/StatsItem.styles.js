@@ -20,8 +20,6 @@ export default StyleSheet.create({
   logo: {
     height: 16,
     width: 16,
-    borderWidth: 1,
-    borderColor: 'red',
   },
   rankText: {
     width: 20,

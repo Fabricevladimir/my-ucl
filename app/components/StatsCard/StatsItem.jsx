@@ -11,7 +11,7 @@ export default function Item({ item }) {
       <View>
         <Text style={styles.text}>{item.name}</Text>
         <View style={styles.teamContainer}>
-          <Image style={styles.logo} />
+          <Image style={styles.logo} source={{ uri: item.imageUri }} />
           <Text style={[styles.text, styles.teamName]}>{item.team}</Text>
         </View>
       </View>

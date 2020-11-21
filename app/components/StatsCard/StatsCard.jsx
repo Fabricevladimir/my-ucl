@@ -6,9 +6,7 @@ import Card from '../common/Card/Card';
 import styles from './StatsCard.styles';
 import StatsItem from './StatsItem';
 
-const item = { rank: 1, name: 'Fabrice Francois', team: 'Real Madrid', value: 15 };
-
-export default function StatsCard({ title, subtitle, value }) {
+export default function StatsCard({ title, subtitle, value, list }) {
   return (
     <>
       <Text style={styles.sectionTitleText}>{title}</Text>
@@ -29,16 +27,11 @@ export default function StatsCard({ title, subtitle, value }) {
   }
 
   function renderBody() {
-    return (
-      <View key>
+    return list.map((player) => (
+      <View key={player.name}>
         <View style={styles.separator} />
-        <StatsItem item={item} />
+        <StatsItem item={player} />
       </View>
-    ); /* {list.map((item) => (
-            <View key={item.name}>
-              <Separator />
-              <ListItem item={item} />
-            </View>
-          ))} */
+    ));
   }
 }
