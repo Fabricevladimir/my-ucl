@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
+
 import theme from '../../styles/theme';
 
 export default StyleSheet.create({
@@ -17,6 +17,6 @@ export default StyleSheet.create({
   separator: {
     width: '100%',
     height: 1,
-    backgroundColor: colors.gray,
+    backgroundColor: theme.onCardSurface,
   },
 });

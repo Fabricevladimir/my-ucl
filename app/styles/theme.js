@@ -18,6 +18,7 @@ export default {
   onSurface: colors.darkGray,
   onSecondary: colors.black,
   onBackground: colors.white,
+  onCardSurface: colors.lightGray,
 
   defaultContainerPadding: 10,
 

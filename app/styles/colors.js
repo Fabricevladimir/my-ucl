@@ -7,7 +7,7 @@ export default {
   offWhite: '#f5f5f5',
   C2orange: '#f39200',
   darkGray: '#2A2A2A',
-  lightGray: '#e6e6e6',
+  lightGray: '#bdbdbd',
   c1BlueDark: '#002f6c',
   c1BlueLight: '#4f83cc',
   transparentWhite: 'rgba(255, 255,255, 0.2)',
