@@ -10,7 +10,7 @@ import LoadingIndicator from '../components/common/LoadingIndicator/LoadingIndic
 import { mapDataToTopScorers } from '../utils/helpers';
 
 export default function StatsPage() {
-  const goalStats = useApi(statsApi.getTopScorers, []);
+  const goalStats = useApi(statsApi.getTopScorers, { topscorers: [] });
 
   useEffect(() => {
     goalStats.request();
@@ -26,7 +26,7 @@ export default function StatsPage() {
           subtitle="stats-top-goal-scorers-subtitle"
           value="stats-top-goal-scorers-value"
           title="stats-top-goal-scorers-title"
-          list={mapDataToTopScorers(goalStats.data)}
+          list={mapDataToTopScorers(goalStats.data.topscorers)}
         />
       </ScrollView>
     </Screen>
