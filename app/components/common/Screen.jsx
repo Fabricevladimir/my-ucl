@@ -19,8 +19,6 @@ export default function Screen({ children }) {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    borderWidth: 2, // FIXME: remove
-    borderColor: 'red', // FIXME: remove
   },
   backgroundImage: {
     width: '100%',

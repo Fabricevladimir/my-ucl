@@ -17,7 +17,7 @@ function useTranslation(value) {
     throw new Error('Translation must be accesed from within the LocaleProvider');
   }
 
-  return context(value);
+  return context(value + '');
 }
 
 export { useTranslation, LocaleProvider };

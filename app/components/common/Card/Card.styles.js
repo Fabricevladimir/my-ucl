@@ -11,7 +11,7 @@ export default StyleSheet.create({
     backgroundColor: theme.surface,
   },
   wrapper: {
-    padding: 3,
+    padding: 4,
     borderRadius: 5,
     backgroundColor: colors.transparentWhite,
     elevation: 1,
