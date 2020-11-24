@@ -31,7 +31,7 @@ export default function StandingsTableKey() {
       <Text style={styles.headerText}>standings-key-recent-form</Text>
       <View style={styles.container}>
         {formKeys.map((form) => (
-          <View key={form.result} style={styles.row}>
+          <View key={form.text} style={styles.row}>
             <FormCircle result={form.result} />
             <Text>{form.text}</Text>
           </View>
