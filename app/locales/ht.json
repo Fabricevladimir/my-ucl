@@ -2,5 +2,13 @@
   "hello": "Byenvini sou aplikasyon an!",
   "stats-top-goal-scorers-value": "Gols",
   "stats-top-goal-scorers-title": "Klasman Bitè",
-  "stats-top-goal-scorers-subtitle": "Jwè"
+  "stats-top-goal-scorers-subtitle": "Jwè",
+  "standings-key-qualification-header": "Kalifikasyon",
+  "standings-key-next-round-text": "League des Champions",
+  "standings-key-europa-text": "League Europa",
+  "standings-key-recent-form": "5 dènye match yo",
+  "standings-key-win-form-text": "Genyen",
+  "standings-key-loss-form-text": "Pèdi",
+  "standings-key-draw-form-text": "Match nil",
+  "standings-key-not-played-text": "Poko jwe"
 }
