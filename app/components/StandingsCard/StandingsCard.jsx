@@ -4,6 +4,7 @@ import { View } from 'react-native';
 import Card from '../common/Card/Card';
 import Text from '../common/Text/Text';
 import styles from './StandingsCard.styles';
+import TeamStats from './TeamStats';
 import TeamTitlesList from './TeamTiltlesList';
 
 export default function StandingsCard({ group, groupTitle }) {
@@ -12,6 +13,7 @@ export default function StandingsCard({ group, groupTitle }) {
       <Text style={styles.groupTitle}>{groupTitle}</Text>
       <View style={styles.content}>
         <TeamTitlesList teams={group} />
+        <TeamStats teams={group} />
       </View>
     </Card>
   );

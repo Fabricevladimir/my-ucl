@@ -8,9 +8,9 @@ import colors from '../../styles/colors';
 import FormCircle from './FormCircle';
 
 const formKeys = [
-  { result: 'w', text: 'standings-key-win-form-text' },
-  { result: 'l', text: 'standings-key-loss-form-text' },
-  { result: 'd', text: 'standings-key-draw-form-text' },
+  { result: 'W', text: 'standings-key-win-form-text' },
+  { result: 'L', text: 'standings-key-loss-form-text' },
+  { result: 'D', text: 'standings-key-draw-form-text' },
   { text: 'standings-key-not-played-text' },
 ];
 

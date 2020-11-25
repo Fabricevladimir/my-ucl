@@ -5,6 +5,7 @@ import theme from '../../styles/theme';
 export default StyleSheet.create({
   tableKey: {
     padding: 5,
+    marginTop: 10,
     backgroundColor: theme.surface,
   },
   container: {
