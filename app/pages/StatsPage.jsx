@@ -17,6 +17,11 @@ export default function StatsPage() {
   useEffect(() => {
     goalStats.request();
     teamStats.request();
+
+    return function cleanup() {
+      goalStats.cancel();
+      teamStats.cancel();
+    };
   }, []);
 
   return (

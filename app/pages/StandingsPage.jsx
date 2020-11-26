@@ -14,6 +14,7 @@ export default function StandingsPage() {
 
   useEffect(() => {
     api.request();
+    return api.cancel;
   }, []);
 
   return (
