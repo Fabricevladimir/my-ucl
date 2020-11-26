@@ -6,7 +6,7 @@ import Screen from '../components/common/Screen';
 import ListFooter from '../components/StandingsCard/StandingsTableKey/StandingsTableKey';
 import standingsApi from '../api/standings';
 import StandingsCard from '../components/StandingsCard/StandingsCard';
-import LoadingIndicator from '../components/common/LoadingIndicator/LoadingIndicator';
+// import LoadingIndicator from '../components/common/LoadingIndicator/LoadingIndicator';
 import { getGroupTitle } from '../utils/helpers';
 
 export default function StandingsPage() {
@@ -19,7 +19,7 @@ export default function StandingsPage() {
 
   return (
     <Screen>
-      <LoadingIndicator visible={api.loading} />
+      {/* <LoadingIndicator visible={api.loading} /> */}
       <FlatList
         data={api.data.standings}
         renderItem={({ item: group }) => (
@@ -27,6 +27,8 @@ export default function StandingsPage() {
             <StandingsCard group={group} groupTitle={getGroupTitle(group)} />
           </View>
         )}
+        onRefresh={api.refresh}
+        refreshing={api.loading}
         keyExtractor={(item) => getGroupTitle(item)}
         ListFooterComponent={ListFooter}
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}

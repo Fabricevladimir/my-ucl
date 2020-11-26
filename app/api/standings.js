@@ -3,8 +3,9 @@ import { leagueId } from '../config/constants';
 
 const endPoint = `leagueTable/${leagueId}`;
 
-function getStandings() {
-  return client.get(endPoint);
+function getStandings(...args) {
+  args[0] = endPoint;
+  return client.get(...args);
 }
 
 export default {

@@ -31,9 +31,9 @@ export default function StatsPage() {
         indicatorStyle="white"
         contentContainerStyle={{ padding: theme.defaultContainerPadding }}>
         <StatsCard
-          subtitle="stats-top-goal-scorers-subtitle"
           value="stats-top-goal-scorers-value"
           title="stats-top-goal-scorers-title"
+          subtitle="stats-top-goal-scorers-subtitle"
           list={mapDataToTopScorers(goalStats.data.topscorers, teamStats.data.teams)}
         />
       </ScrollView>
