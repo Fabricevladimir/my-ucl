@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { FlatList, View } from 'react-native';
 
-// import Text from '../components/common/Text/Text';
 import useApi from '../hooks/useApi';
 import Screen from '../components/common/Screen';
-import ListFooter from '../components/StandingsCard/StandingsTableKey';
+import ListFooter from '../components/StandingsCard/StandingsTableKey/StandingsTableKey';
 import standingsApi from '../api/standings';
 import StandingsCard from '../components/StandingsCard/StandingsCard';
 import LoadingIndicator from '../components/common/LoadingIndicator/LoadingIndicator';
+import { getGroupTitle } from '../utils/helpers';
 
 export default function StandingsPage() {
   const api = useApi(standingsApi.getStandings, { standings: [] });
@@ -32,8 +32,4 @@ export default function StandingsPage() {
       />
     </Screen>
   );
-}
-
-function getGroupTitle(clubList) {
-  return clubList[0].group.split(':')[1];
 }

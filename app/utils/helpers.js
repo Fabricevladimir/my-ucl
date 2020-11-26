@@ -23,7 +23,6 @@ function getRank(index, currentPlayerGoals, previousPlayer) {
   return currentPlayerGoals < previousPlayer.value ? previousPlayer.rank + 1 : previousPlayer.rank;
 }
 
-// TODO: Setup function to retrieve logo from external data
 function getLogoUri(teamId, teamList = []) {
   return (
     teamList.find((team) => team.team_id === teamId)?.logo ||
@@ -31,4 +30,8 @@ function getLogoUri(teamId, teamList = []) {
   );
 }
 
-export { mapDataToTopScorers };
+function getGroupTitle(teams) {
+  return teams[0].group.split(':')[1];
+}
+
+export { mapDataToTopScorers, getGroupTitle };

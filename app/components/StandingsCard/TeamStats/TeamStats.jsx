@@ -1,36 +1,12 @@
 import React from 'react';
 import { View, ScrollView } from 'react-native';
-import colors from '../../styles/colors';
 
-import Text from '../common/Text/Text';
+import Text from '../../common/Text/Text';
 import styles from './TeamStats.styles';
-import MatchForm from './MatchForm';
+import colors from '../../../styles/colors';
+import MatchForm from '../MatchForm/MatchForm';
 
-const statKeys = [
-  'matchsPlayed',
-  'win',
-  'draw',
-  'lose',
-  'points',
-  'goalsFor',
-  'goalsAgainst',
-  'goalsDiff',
-  'forme',
-];
-
-const headers = {
-  win: 'standings-header-win',
-  draw: 'standings-header-draw',
-  lose: 'standings-header-lose',
-  forme: 'standings-header-form',
-  points: 'standings-header-points',
-  goalsFor: 'standings-header-goals-for',
-  goalsDiff: 'standings-header-goals-diff',
-  goalsAgainst: 'standings-header-goals-against',
-  matchsPlayed: 'standings-header-matches-played',
-};
-
-export default function TeamStats({ teams, onScrollStop = () => null }) {
+export default function TeamStats({ teams, onScrollStop }) {
   return (
     <ScrollView
       horizontal
@@ -90,3 +66,27 @@ function getStyle(key, style) {
 
   return style;
 }
+
+const statKeys = [
+  'matchsPlayed',
+  'win',
+  'draw',
+  'lose',
+  'points',
+  'goalsFor',
+  'goalsAgainst',
+  'goalsDiff',
+  'forme',
+];
+
+const headers = {
+  win: 'standings-header-win',
+  draw: 'standings-header-draw',
+  lose: 'standings-header-lose',
+  forme: 'standings-header-form',
+  points: 'standings-header-points',
+  goalsFor: 'standings-header-goals-for',
+  goalsDiff: 'standings-header-goals-diff',
+  goalsAgainst: 'standings-header-goals-against',
+  matchsPlayed: 'standings-header-matches-played',
+};

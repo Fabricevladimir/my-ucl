@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
-import colors from '../../styles/colors';
+
+import colors from '../../../styles/colors';
+import theme from '../../../styles/theme';
 
 export default StyleSheet.create({
   container: {
@@ -8,6 +10,9 @@ export default StyleSheet.create({
   },
   titleContainer: {
     marginLeft: 13,
+  },
+  title: {
+    ...theme.titleText,
   },
   listContainer: {
     width: '100%',

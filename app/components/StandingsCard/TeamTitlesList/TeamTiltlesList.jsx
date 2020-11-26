@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image, View } from 'react-native';
 
-import Text from '../common/Text/Text';
+import Text from '../../common/Text/Text';
 import styles from './TeamTitleList.styles';
-import colors from '../../styles/colors';
+import colors from '../../../styles/colors';
 
 const borderColors = {
   1: { backgroundColor: colors.c1Blue },
@@ -16,7 +16,7 @@ export default function TeamTitlesList({ teams }) {
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
-        <Text style={styles.label}>standings-title-list-header</Text>
+        <Text style={styles.title}>standings-title-list-header</Text>
       </View>
       <View style={styles.listContainer}>
         {teams.map((team) => (

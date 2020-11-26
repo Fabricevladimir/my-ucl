@@ -2,17 +2,10 @@ import React from 'react';
 import { View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-import Text from '../common/Text/Text';
+import Text from '../../common/Text/Text';
 import styles from './StandingsTableKey.styles';
-import colors from '../../styles/colors';
-import FormCircle from './FormCircle';
-
-const formKeys = [
-  { result: 'W', text: 'standings-key-win-form-text' },
-  { result: 'L', text: 'standings-key-loss-form-text' },
-  { result: 'D', text: 'standings-key-draw-form-text' },
-  { text: 'standings-key-not-played-text' },
-];
+import colors from '../../../styles/colors';
+import FormCircle from '../FormCircle/FormCircle';
 
 export default function StandingsTableKey() {
   return (
@@ -40,3 +33,10 @@ export default function StandingsTableKey() {
     </View>
   );
 }
+
+const formKeys = [
+  { result: 'W', text: 'standings-key-win-form-text' },
+  { result: 'L', text: 'standings-key-loss-form-text' },
+  { result: 'D', text: 'standings-key-draw-form-text' },
+  { text: 'standings-key-not-played-text' },
+];
