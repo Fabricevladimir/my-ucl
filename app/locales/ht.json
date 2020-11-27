@@ -1,6 +1,24 @@
 {
   "hello": "Byenvini sou aplikasyon an!",
   "stats-top-goal-scorers-value": "Gols",
-  "stats-top-goal-scorers-title": "Meyè Bitè",
-  "stats-top-goal-scorers-subtitle": "Jwè"
+  "stats-top-goal-scorers-title": "Klasman Bitè",
+  "stats-top-goal-scorers-subtitle": "Jwè",
+  "standings-title-list-header": "Ekip",
+  "standings-header-matches-played": "MJ",
+  "standings-header-win": "G",
+  "standings-header-draw": "N",
+  "standings-header-lose": "P",
+  "standings-header-form": "5 Dènye Matchs",
+  "standings-header-points": "Pts",
+  "standings-header-goals-for": "GP",
+  "standings-header-goals-diff": "GK",
+  "standings-header-goals-against": "+/-",
+  "standings-key-qualification-header": "Kalifikasyon",
+  "standings-key-next-round-text": "League des Champions",
+  "standings-key-europa-text": "League Europa",
+  "standings-key-recent-form": "5 dènye match yo",
+  "standings-key-win-form-text": "Genyen",
+  "standings-key-loss-form-text": "Pèdi",
+  "standings-key-draw-form-text": "Match nil",
+  "standings-key-not-played-text": "Poko jwe"
 }
