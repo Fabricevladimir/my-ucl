@@ -34,7 +34,6 @@ export default function useApi(apiFunction, initialState = {}) {
     loading,
     request,
     isCancel,
-    refresh: () => request(null, null, { forceUpdate: true }),
     setLoading,
   };
 }

@@ -8,6 +8,7 @@ import TeamStats from './TeamStats/TeamStats';
 import TeamTitlesList from './TeamTitlesList/TeamTiltlesList';
 
 export default function StandingsCard({ group, groupTitle }) {
+  if (group === null) console.log('NULL');
   const [position, setPosition] = useState({ drag: 0, scroll: 0 });
   const [isVisible, setIsVisible] = useState(false);
 
