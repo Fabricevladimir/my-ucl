@@ -1,7 +1,7 @@
+import { useApi } from '@fabricefrancois/use-api';
 import { FlatList, View } from 'react-native';
 import React, { useEffect } from 'react';
 
-import useApi from '../hooks/useApi';
 import Screen from '../components/common/Screen';
 import ListFooter from '../components/StandingsCard/StandingsTableKey/StandingsTableKey';
 import standingsApi from '../api/standings';
@@ -10,25 +10,24 @@ import LoadingIndicator from '../components/common/LoadingIndicator/LoadingIndic
 import { getGroupTitle } from '../utils/helpers';
 
 export default function StandingsPage() {
-  const api = useApi(standingsApi.getStandings, { standings: [] });
+  const { request, loading, data } = useApi(standingsApi.getStandings, { api: { standings: [] } });
 
   useEffect(() => {
-    api.request();
-    return api.cancel;
+    request();
   }, []);
 
   return (
     <Screen>
-      <LoadingIndicator visible={api.loading} />
+      <LoadingIndicator visible={loading} />
       <FlatList
-        data={api.data.standings}
+        data={data.api.standings}
         renderItem={({ item: group }) => (
           <View style={{ paddingHorizontal: 5 }}>
             <StandingsCard group={group} groupTitle={getGroupTitle(group)} />
           </View>
         )}
-        onRefresh={() => api.request(null, null, { forceUpdate: true })}
-        refreshing={api.loading}
+        onRefresh={() => request(null, null, { forceUpdate: true })}
+        refreshing={loading}
         keyExtractor={(item) => getGroupTitle(item)}
         ListFooterComponent={ListFooter}
         ItemSeparatorComponent={() => <View style={{ height: 10 }} />}

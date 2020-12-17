@@ -28,10 +28,10 @@ const get = apiClient.get;
  */
 apiClient.get = async function (url, params, config) {
   // if force update - get and Cache
-  if (config.forceUpdate) {
-    logger.log('REFRESHING ->');
-    return await getAndCache(url, params, config);
-  }
+  // if (config.forceUpdate) {
+  //   logger.log('REFRESHING ->');
+  //   return await getAndCache(url, params, config);
+  // }
 
   // not force update - get from cache
   const data = await cache.get(url);
