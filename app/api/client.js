@@ -26,23 +26,31 @@ const get = apiClient.get;
  * is retrieved from the cache. New and updated data
  * are stored in the cache.
  */
-apiClient.get = async function (url, params, axiosConfig) {
-  // Check if in cache
+apiClient.get = async function (url, params, config) {
+  // if force update - get and Cache
+  if (config.forceUpdate) {
+    logger.log('REFRESHING ->');
+    return await getAndCache(url, params, config);
+  }
+
+  // not force update - get from cache
   const data = await cache.get(url);
   if (data) {
     logger.log('CACHED DATA');
     return { ok: true, data };
   }
 
-  // Not in cache
-  const response = await get(url, params, axiosConfig);
-  logger.log('NEW REQUEST MADE');
+  return await getAndCache(url, params, config);
+};
 
-  // Add to cache and return response
+async function getAndCache(url, params, config) {
+  const response = await get(url, params, config);
+  logger.log('NEW REQUEST');
+
   if (response.ok) {
     cache.store(url, response.data);
     return response;
   }
-};
+}
 
 export default apiClient;

@@ -28,10 +28,10 @@ function init() {
   }
 
   t.cache.clear();
-  i18n.locale = locale;
-  i18n.fallbacks = true;
   i18n.translations = { [locale]: translationGetters[locale]() };
   I18nManager.forceRTL(isRTL);
+  i18n.locale = locale;
+  i18n.fallbacks = true;
 }
 
 export { t, init, translationGetters };
